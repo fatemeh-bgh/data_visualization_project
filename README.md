@@ -1,94 +1,96 @@
-📊 Project Overview
+# 📊 Internet Access Inequality in Europe — Data Analysis Project
 
+## 📊 Project Overview
 While internet access in Europe is often viewed as near-universal, significant regional and socioeconomic disparities persist. This project investigates:
 
+- Whether income or education serves as a stronger predictor of digital connectivity  
+- Which countries deviate from expected patterns based on their economic capacity  
+- Regional clustering and digital divide patterns across Europe  
 
-Whether income or education serves as a stronger predictor of digital connectivity
-Which countries deviate from expected patterns based on their economic capacity
-Regional clustering and digital divide patterns across Europe
+---
 
+## 🔍 Key Research Questions
 
-🔍 Key Research Questions
+- How does internet access vary across European countries in 2024?  
+- Is internet access more strongly correlated with income levels or educational attainment?  
+- Which countries overperform or underperform based on their economic capacity?  
 
+---
 
-How does internet access vary across European countries in 2024?
-Is internet access more strongly correlated with income levels or educational attainment?
-Which countries "overperform" or "underperform" based on their economic capacity?
+## 📁 Data Sources & Methodology
 
+### Datasets (Eurostat, 2024)
 
+| Indicator | Source Code | Description |
+|----------|-------------|-------------|
+| Internet Access | tin00134 | Percentage of households with internet access |
+| Income | ilc_di17 | Population-weighted mean equivalised net income (EUR) |
+| Education | sdg_04_20 | Share of adults aged 30–34 with tertiary education (ISCED 5–8) |
 
-📁 Data Sources & Methodology
-Datasets (Eurostat, 2024)
-IndicatorSourceDescriptionInternet Accesstin00134Percentage of households with internet accessIncomeilc_di17Population-weighted mean equivalised net income (EUR)Educationsdg_04_20Share of adults aged 30-34 with tertiary education (ISCED 5-8)
-Methodology
+### Methodology
 
+- **Sample:** 29 European countries with complete 2024 data  
+- **Excluded:** Albania, Switzerland, Iceland, North Macedonia (missing values)  
+- **Approach:** Descriptive and exploratory analysis with OLS regression  
+- **Limitations:** Correlational analysis only — not causal  
 
-Sample: 29 European countries with complete 2024 data
+### Tools Used
 
-Excluded: 4 countries due to missing values (Albania, Switzerland, Iceland, North Macedonia)
+- Data processing: pandas  
+- Visualization: matplotlib, seaborn, plotly, Datawrapper  
+- Statistical analysis: statsmodels (OLS regression)  
+- AI assistance: Gemini, ChatGPT (coding & editing), Nano Banana (image generation)  
 
-Approach: Descriptive and exploratory analysis with OLS regression
+---
 
-Limitations: Correlational only—not causal
+## 🎯 Key Findings
 
-Tools Used
+### 1. Income is the Primary Driver
+Strong positive association between income and internet access. Higher-income countries tend to achieve higher connectivity rates.
 
-Data Processing: pandas
+### 2. Education’s Limited Role
+Education correlates positively with internet access, but is a weaker and less stable predictor compared to income.
 
-Visualization: matplotlib, seaborn, plotly, Datawrapper
+### 3. Regional Clustering
 
-Statistical Analysis: statsmodels (OLS Regression)
+- **Nordic & Western Europe:** High income, near-universal access, higher tertiary attainment  
+- **Southern Europe:** Relatively high access despite lower income levels  
+- **Eastern Europe:** More dispersed outcomes with generally lower income  
 
-AI Assistance: Gemini, ChatGPT (coding & text editing), Nano Banana (image generation)
+### 4. Notable Deviations from Income-Predicted Access
 
+**Higher access than expected:**
 
-🎯 Key Findings
+- 🇳🇱 Netherlands  
+- 🇵🇱 Poland  
+- 🇪🇸 Spain  
 
-1. Income is the Primary Driver
-2. Strong positive association between mean income and internet access. Higher-income countries generally achieve higher connectivity rates.
+**Lower access than expected:**
 
-4. Education's Limited Role While positively correlated, tertiary education is a weaker and less stable predictor than income. Countries with similar education levels show wide variation in access rates.
+- 🇬🇷 Greece  
+- 🇭🇷 Croatia  
+- 🇮🇪 Ireland  
 
-6. Regional Clustering
+---
 
-Nordic & Western Europe: High income, near-universal access, higher tertiary attainment
+## 📂 Repository Structure
 
-Southern Europe: Relatively high access at lower income levels, variable education
-
-Eastern Europe: More dispersed, generally lower income, heterogeneous outcomes
-
-4. Notable Deviations from Income-Predicted Access
-Positive Residuals (Higher access than expected):
-
-🇳🇱 Netherlands
-
-🇵🇱 Poland
-
-🇪🇸 Spain
-
-Negative Residuals (Lower access than expected):
-
-🇬🇷 Greece
-
-🇭🇷 Croatia
-
-🇮🇪 Ireland
-
-
-📂 Repository Structure
-
+```
 .
-├── Baghchei_data_visualization.pdf    # Full visual analysis (maps, charts, regression)
+├── Baghchei_data_visualization.pdf
+├── README.md
+└── data/
+```
 
-├── README.md                           # This file
+---
 
-└── [data/]                            # (Optional) Raw/processed datasets
+## 📄 License
+This project is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license.
 
-📄 License
-
-This project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) license.
-
+---
 
 
-🙏 Acknowledgments
-Data provided by Eurostat. Visualizations created with Datawrapper, matplotlib, seaborn, and plotly.
+## 🙏 Acknowledgments
+Data provided by Eurostat. Visualizations created using Datawrapper, matplotlib, seaborn, and plotly.
+
+---
