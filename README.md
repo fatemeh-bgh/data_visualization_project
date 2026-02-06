@@ -77,10 +77,13 @@ Education correlates positively with internet access, but is a weaker and less s
 
 ```
 .
-├── Baghchei_data_visualization.pdf
-├── README.md
-└── data/
+├── data/                         # Raw or processed datasets
+├── outputs/                      # Generated charts, tables, or analysis outputs
+├── digital_divide_europe.ipynb   # Main analysis notebook
+├── README.md                     # Project documentation
+└── .DS_Store                     # System file (can be ignored)
 ```
+
 
 ---
 
